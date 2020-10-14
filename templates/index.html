@@ -1,58 +1,71 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
+{% block title %}Script Spinner{% endblock %}
 
-<head>
+{% block css %}
+{% endblock %}
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+{% block main %}
 
-  <title>Script Spinner</title>
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
 
-  <!-- Bootstrap core CSS -->
-  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
-
-  <!-- Custom styles for this template -->
-  <link href="{% static 'css/coming-soon.min.css' %}" rel="stylesheet">
-
-</head>
-
-<body>
-
-  <div class="overlay"></div>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="{% static 'mp4/bg.mp4' %}" type="video/mp4">
-  </video>
-
-  <div class="masthead">
-    <div class="masthead-bg"></div>
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col-12 my-auto">
-          <div class="masthead-content text-white py-5 py-md-0">
-            <h1 class="mb-3">Coming Soon!</h1>
-            <img class="logo" src="{% static 'img/logo.png' %}" alt="logo">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1>Script Spinner <br>made simple</h1>
+          <h2>Simple and complete software solution for script writing</h2>
+          <div class="d-flex">
+            <a href="#" class="btn-get-started scrollto">Get Started</a>
+            <a href="#" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
           </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img">
+          <img src="{% static 'img/hero-img.png' %}" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  </section><!-- End Hero -->
 
-  <!-- Custom scripts for this template -->
-  <script src="{% static 'js/coming-soon.min.js' %}"></script>
+  <main id="main">
 
-</body>
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container">
 
-</html>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box">
+              <div class="icon"><i class="icofont-computer"></i></div>
+              <h4 class="title"><a href="">Coming Soon!</a></h4>
+              <p class="description">Stay tuned for next update!</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="icofont-image"></i></div>
+              <h4 class="title"><a href="">Coming Soon!</a></h4>
+              <p class="description">Stay tuned for next update!</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="icofont-tasks-alt"></i></div>
+              <h4 class="title"><a href="">Coming Soon!</a></h4>
+              <p class="description">Stay tuned for next update!</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <p></p>
+    </section><!-- End Featured Services Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}

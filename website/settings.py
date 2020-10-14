@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'main.apps.MainConfig',
+    'user.apps.UserConfig',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static/'),)
+
+# User model
+
+AUTH_USER_MODEL = 'user.ScriptSpinnerUser'
+
+# Crispy_forms
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

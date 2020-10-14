@@ -6,7 +6,7 @@ from .managers import ScriptSpinnerUserManager
 
 class ScriptSpinnerUser(AbstractUser):
     username = None
-    email = models.EmailField(_('email address'), unique=True)
+    email = models.EmailField(_('Email address'), unique=True)
     is_subscribed = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'

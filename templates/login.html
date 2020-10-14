@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Script Spinner - Log in{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block main %}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Log in</h2>
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li>Log in</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        {% if messages %}
+            {% for msg in messages %}       
+                <div class="alert alert-{{msg.level_tag}}" role="alert">
+                {{msg.message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <form class="form-signin" method="POST">{% csrf_token %}
+          {{ form|crispy }}
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+      </form>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}

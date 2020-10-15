@@ -140,7 +140,7 @@ For our contributors: Please ask me about the detail setting about env file on t
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This repository is used to develop the official Script Spinner website. To start the development server, you need to enter the following command:
+This repository is used to develop the official Script Spinner website. To start the development server, enter the following command:
 ```sh
 python manage.py runserver
 ```

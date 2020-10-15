@@ -52,18 +52,17 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://scriptspinner.com)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`hirokiyaginuma`, `scriptspinner-website`, `twitter_handle`, `email`
+Script Spinner is the software for planning, organizing and executing script content. This repository is the development code for the official script spinner website.
 
 
 ### Built With
 
-* []()
-* []()
-* []()
+* [Python](https://www.python.org/)
+* [Django](https://www.djangoproject.com/)
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
 
 
 
@@ -74,31 +73,63 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+* [Python](https://www.python.org/)
+* [Git](https:/git-scm.com/)
+
+To check if you have python and git installed on your computer, go to the terminal and enter the following:
+
 ```sh
-npm install npm@latest -g
+python --version
+```
+```sh
+git --version
 ```
 
 ### Installation
 
 1. Clone the repo
 ```sh
-git clone https://github.com/hirokiyaginuma/scriptspinner-website.git
+git clone https://github.com/hirokiyaginuma/scriptspinner-website
 ```
-2. Install NPM packages
+2. Make sure you are in the project directory
 ```sh
-npm install
+cd scriptspinner-website
 ```
+3. Start your virtual environment
+Windows:
+```sh
+python -m venv myvenv
+```
+Linux and OS X:
+```sh
+python3 -m venv myvenv
+```
+3. Activate your virtual environment (Make sure you're on the virtual environment evrrytime you launch the terminal.)
+Windows:
+```sh
+myvenv\Scripts\activate
+```
+Linux and OS X:
+```sh
+source myvenv/bin/activate
+```
+4. Install required package for the project
+```sh
+pip install -r requirements.txt
+```
+5. Create envirnment file for local development (For details, see [python-decouple](https://github.com/henriquebastos/python-decouple/))
+
+
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+This repository is used to develop the official Script Spinner website. To start the development server, you need to enter the following command:
+```sh
+python manage.py runserver
+```
 
 
 
@@ -112,12 +143,10 @@ See the [open issues](https://github.com/hirokiyaginuma/scriptspinner-website/is
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b your-branch-name`)
+3. Commit your Changes (`git commit -m 'Comment goes here'`)
+4. Push to the Branch (`git push origin your-branch-name`)
 5. Open a Pull Request
 
 
@@ -125,7 +154,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+TBA
 
 
 

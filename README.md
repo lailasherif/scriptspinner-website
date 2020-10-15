@@ -52,9 +52,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://scriptspinner.com)
+<a href="https://github.com/hirokiyaginuma/scriptspinner-website">
+    <img src="/templates/static/img/SS_website_github.png" alt="Website" width="50%" height="50%">
+</a>
 
 Script Spinner is the software for planning, organizing and executing script content. This repository is the development code for the official script spinner website.
+
 
 
 ### Built With
@@ -118,7 +121,18 @@ source myvenv/bin/activate
 pip install -r requirements.txt
 ```
 5. Create envirnment file for local development (For details, see [python-decouple](https://github.com/henriquebastos/python-decouple/))
-
+Create a .env text file on your repository's root directory in the form like:
+```
+DEBUG=True
+SECRET_KEY=ThisIsSupposedToBeSecret
+ALLOWED_HOSTS=*
+DB_NAME=dbname
+DB_USER=dbusername
+DB_PASSWORD=dbpassword
+DB_HOST=dbhostname
+DB_PORT=dbport
+```
+For our contributors: Please ask me about the detail setting about env file on the developmental server and production server.
 
 
 
@@ -170,9 +184,9 @@ Project Link: [https://github.com/hirokiyaginuma/scriptspinner-website](https://
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
+* [Python Tutorial](https://www.w3schools.com/python/python_intro.asp)
+* [Django Tutorial](https://tutorial.djangogirls.org/en/)
+* [Bootstrap Documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
 
 
@@ -180,15 +194,15 @@ Project Link: [https://github.com/hirokiyaginuma/scriptspinner-website](https://
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/hirokiyaginuma/repo.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/hirokiyaginuma/scriptspinner-website.svg?style=flat-square
 [contributors-url]: https://github.com/hirokiyaginuma/scriptspinner-website/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/hirokiyaginuma/repo.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/hirokiyaginuma/scriptspinner-website.svg?style=flat-square
 [forks-url]: https://github.com/hirokiyaginuma/scriptspinner-website/network/members
-[stars-shield]: https://img.shields.io/github/stars/hirokiyaginuma/repo.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/hirokiyaginuma/scriptspinner-website.svg?style=flat-square
 [stars-url]: https://github.com/hirokiyaginuma/scriptspinner-website/stargazers
-[issues-shield]: https://img.shields.io/github/issues/hirokiyaginuma/repo.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/hirokiyaginuma/scriptspinner-website.svg?style=flat-square
 [issues-url]: https://github.com/hirokiyaginuma/scriptspinner-website/issues
-[license-shield]: https://img.shields.io/github/license/hirokiyaginuma/repo.svg?style=flat-square
+[license-shield]: https://img.shields.io/github/license/hirokiyaginuma/scriptspinner-website.svg?style=flat-square
 [license-url]: https://github.com/hirokiyaginuma/scriptspinner-website/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/hiroki-yaginuma-6719271b6

@@ -101,7 +101,7 @@ git clone https://github.com/hirokiyaginuma/scriptspinner-website
 ```sh
 cd scriptspinner-website
 ```
-3. Start your virtual environment
+3. Make your virtual environment
 
 Windows:
 ```sh
@@ -111,7 +111,7 @@ Linux and OS X:
 ```sh
 python3 -m venv myvenv
 ```
-3. Activate your virtual environment (Make sure you're on the virtual environment evrrytime you launch the terminal.)
+4. Activate your virtual environment (Make sure you're on the virtual environment evrrytime you launch the terminal.)
 
 Windows:
 ```sh
@@ -121,11 +121,11 @@ Linux and OS X:
 ```sh
 source myvenv/bin/activate
 ```
-4. Install required package for the project
+5. Install required package for the project
 ```sh
 pip install -r requirements.txt
 ```
-5. Create envirnment file for local development (For details, see [python-decouple](https://github.com/henriquebastos/python-decouple/))
+6. Create envirnment file for local development (For details, see [python-decouple](https://github.com/henriquebastos/python-decouple/))
 Create a .env text file on your repository's root directory in the form like:
 ```
 DEBUG=True

@@ -53,7 +53,7 @@
 ## About The Project
 
 <a href="https://github.com/hirokiyaginuma/scriptspinner-website">
-    <img src="/templates/static/img/SS_website_github.png" alt="Website" width="50%" height="50%">
+    <img src="/templates/static/img/SS_website_github.png" alt="Website" width="80%" height="80%">
 </a>
 
 Script Spinner is the software for planning, organizing and executing script content. This repository is the development code for the official script spinner website.
@@ -99,6 +99,7 @@ git clone https://github.com/hirokiyaginuma/scriptspinner-website
 cd scriptspinner-website
 ```
 3. Start your virtual environment
+
 Windows:
 ```sh
 python -m venv myvenv
@@ -108,6 +109,7 @@ Linux and OS X:
 python3 -m venv myvenv
 ```
 3. Activate your virtual environment (Make sure you're on the virtual environment evrrytime you launch the terminal.)
+
 Windows:
 ```sh
 myvenv\Scripts\activate
@@ -157,11 +159,10 @@ See the [open issues](https://github.com/hirokiyaginuma/scriptspinner-website/is
 <!-- CONTRIBUTING -->
 ## Contributing
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b your-branch-name`)
-3. Commit your Changes (`git commit -m 'Comment goes here'`)
+1. Create your your Branch (`git checkout -b your-branch-name`)
+2. Work on the project!
+3. Commit your changes (`git commit -m 'Comment goes here'`)
 4. Push to the Branch (`git push origin your-branch-name`)
-5. Open a Pull Request
 
 
 
@@ -185,6 +186,7 @@ Project Link: [https://github.com/hirokiyaginuma/scriptspinner-website](https://
 ## Acknowledgements
 
 * [Python Tutorial](https://www.w3schools.com/python/python_intro.asp)
+* [Git Tutorial](https://www.atlassian.com/git/tutorials)
 * [Django Tutorial](https://tutorial.djangogirls.org/en/)
 * [Bootstrap Documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 

@@ -67,7 +67,10 @@ Script Spinner is the software for planning, organizing and executing script con
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 
+### Other Repos
 
+* scriptspinner-software (Coming soon)
+* [scriptspinner-random](https://github.com/hirokiyaginuma/scriptspinner-random)
 
 <!-- GETTING STARTED -->
 ## Getting Started

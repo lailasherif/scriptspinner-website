@@ -145,3 +145,7 @@ AUTH_USER_MODEL = 'user.ScriptSpinnerUser'
 # Crispy_forms
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Google Analytics
+
+GOOGLE_ANALYTICS_TRACKING_ID = 'G-JY4TYCRMWD'

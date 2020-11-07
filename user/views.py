@@ -158,21 +158,9 @@ def card(request):
 
         latest_invoice = stripe.Invoice.retrieve(s.latest_invoice)
 
-        stripe.PaymentIntent.modify(
-            payment_intent_id,
-            payment_method=payment_method_id,
-            customer=customer.id
-        )
-
-        ret = stripe.PaymentIntent.confirm(
-            payment_intent_id
-        )
-
-        '''
-        ret = stripe.PaymentIntent.confirm(
+        ret = stripe.PaymentIntent.retrieve(
             latest_invoice.payment_intent
         )
-        '''
 
         if ret.status == 'requires_action':
             pi = stripe.PaymentIntent.retrieve(
@@ -184,8 +172,6 @@ def card(request):
             context['STRIPE_PUBLISHABLE_KEY'] = settings.STRIPE_PUBLISHABLE_KEY
 
             return render(request, 'payments/3dsec.html', context)
-
-        # logger.info(f"Returned from paymentintent confirm: {ret}")
 
     else:
         stripe.PaymentIntent.modify(
@@ -201,9 +187,6 @@ def card(request):
 
             context['payment_intent_secret'] = ret.client_secret
             context['STRIPE_PUBLISHABLE_KEY'] = settings.STRIPE_PUBLISHABLE_KEY
-
-            logger.info(f"Returned from paymentintent confirm: {ret}")
-            logger.info(f"Context: {context}")
 
             return render(request, 'payments/3dsec.html', context)
 

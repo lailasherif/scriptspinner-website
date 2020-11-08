@@ -29,14 +29,14 @@ def stripe_webhooks(request):
         event = stripe.Webhook.construct_event(
             payload, sig_header, settings.STRIPE_WEBHOOK_SIGNING_KEY
         )
-        logger.info("Event constructed correctly")
+        logger.info("Webhook Log: Event constructed correctly")
     except ValueError:
         # Invalid payload
-        logger.warning("Invalid Payload")
+        logger.warning("Webhook Log: Invalid Payload")
         return HttpResponse(status=400)
     except stripe.error.SignatureVerificationError:
         # Invalid signature
-        logger.warning("Invalid signature")
+        logger.warning("Webhook Log: Invalid signature")
         return HttpResponse(status=400)
 
     # Handle the event
@@ -96,12 +96,13 @@ def logout(request):
 
 @login_required(login_url='redirect_to_login')
 def subscribe(request):
-    logger.info("subscribe")
+    logger.info("Log: I'm in the subscribe function.")
     return render(request, 'payments/subscribe.html')
 
 @require_POST
 @login_required
 def payment_method(request):
+    logger.info("Log: I'm in the payment_method function.")
     stripe.api_key = API_KEY
     plan = request.POST.get('plan')
     automatic = request.POST.get('automatic')
@@ -132,6 +133,7 @@ def payment_method(request):
 
 @login_required
 def card(request):
+    logger.info("Log: I'm in the card function.")
     payment_intent_id = request.POST['payment_intent_id']
     payment_method_id = request.POST['payment_method_id']
     stripe_plan_id = request.POST['stripe_plan_id']
@@ -176,7 +178,8 @@ def card(request):
     else:
         stripe.PaymentIntent.modify(
             payment_intent_id,
-            payment_method=payment_method_id
+            payment_method=payment_method_id,
+            receipt_email=request.user.email
         )
         ret = stripe.PaymentIntent.confirm(
             payment_intent_id

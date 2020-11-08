@@ -1,3 +1,4 @@
+from datetime import date, datetime, timedelta
 import logging
 import stripe
 from .models import ScriptSpinnerUser
@@ -48,13 +49,16 @@ class SS_Plan:
 
 
 def set_paid_until(charge):
-    logger.info(f"set_paid_until with {charge}")
+    logger.info(f"Webhook Log: set_paid_until with {charge}")
 
     stripe.api_key = API_KEY
     pi = stripe.PaymentIntent.retrieve(charge.payment_intent)
 
+    logger.info(f"Webhook Log: pi with {pi}")
+
     if pi.customer:
-        customer = stripe.Customer.retrieve(pi.customer)
+        customer = stripe.Customer.retrieve(pi.customer, expand=['subscriptions'])
+        logger.info(f"Webhook Log: Customer retrieve {customer}")
         email = customer.email
 
         if customer:
@@ -76,8 +80,21 @@ def set_paid_until(charge):
             f"Profile with {current_period_end} saved for user {email}"
         )
     else:
-        pass
-        # charge.amount  1990 | 19995
-        # this was one time payment, update
-        # paid_until (e.g. paid_until = current_date + 31 days) using
-        # charge.paid + charge.amount attrs
+        email = charge.receipt_email
+        amount = charge.amount
+        paid = charge.paid
+
+        try:
+            user = ScriptSpinnerUser.objects.get(email=email)
+        except ScriptSpinnerUser.DoesNotExist:
+            logger.warning(
+                f"User with email {email} not found"
+            )
+            return False
+
+        if amount == 1000 and paid:
+            user.set_paid_until(date.today() + timedelta(days=31))
+        elif amount == 12000 and paid:
+            user.set_paid_until(date.today() + timedelta(days=365))
+        else:
+            logger.warning(f"Not paid or invalid amount: {amount}")

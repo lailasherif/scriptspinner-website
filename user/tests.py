@@ -50,7 +50,7 @@ class PaymentUnitTest(TestCase):
         )
 
     def test_different_date_values(self):
-        current_date = date(2020, 1, 4)  # 1st of April 2020
+        current_date = date(2020, 1, 4)
         _30days = timedelta(days=30)
 
         self.user.set_paid_until(current_date + _30days)

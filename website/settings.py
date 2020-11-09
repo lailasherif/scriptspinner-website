@@ -150,3 +150,29 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Google Analytics
 
 GOOGLE_ANALYTICS_TRACKING_ID = 'G-JY4TYCRMWD'
+
+# Logging
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler'
+        }
+    },
+    'loggers': {
+        'user': {
+            'handlers': ['console'],
+            'level': 'DEBUG'
+        }
+    }
+}
+
+# Stripe keys
+
+STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
+STRIPE_PUBLISHABLE_KEY = config('STRIPE_PUBLISHABLE_KEY')
+STRIPE_PLAN_MONTHLY_ID = config('STRIPE_PLAN_MONTHLY_ID')
+STRIPE_PLAN_ANNUAL_ID = config('STRIPE_PLAN_ANNUAL_ID')
+STRIPE_WEBHOOK_SIGNING_KEY = config('STRIPE_WEBHOOK_SIGNING_KEY')

@@ -66,6 +66,7 @@ Script Spinner is the software for planning, organizing and executing script con
 * [Django](https://www.djangoproject.com/)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
+* [Srtipe API](https://stripe.com/)
 
 ### Other Repos
 
